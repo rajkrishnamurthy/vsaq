@@ -1,0 +1,14 @@
+version: "3.4"
+services:
+  vsaq:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        buildno: 1
+    image: vsaq:latest
+    hostname: vsaq
+    container_name: vsaq
+    ports:
+      - 8080:80/tcp
+    restart: always

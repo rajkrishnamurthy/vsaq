@@ -24,11 +24,11 @@ import re
 import SimpleHTTPServer
 import sys
 
-PORT = 9000
+PORT = 80
 if len(sys.argv) > 1:
   PORT = int(sys.argv[1])
 
-server_address = ("127.0.0.1", PORT)
+server_address = ("0.0.0.0", PORT)
 
 #./ do.sh testserver generates the file
 DEPS_FILE = "build/deps-runfiles.js"
